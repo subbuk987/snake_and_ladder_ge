@@ -10,6 +10,8 @@ def snake_and_ladder():
         option = random.randint(1, 3)  # 1 - NoPlay, 2 - Ladder, 3 - Snake
         if option == 2:
             position += outcome
+            if position > 100:
+                position -= outcome
 
         elif option == 3:
             position -= outcome
